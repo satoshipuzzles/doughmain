@@ -1,0 +1,18 @@
+{
+  "name": "doughmain",
+  "version": "1.0.0",
+  "description": "Domain analysis tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "openai": "^4.20.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+} 
