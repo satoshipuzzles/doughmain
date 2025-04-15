@@ -1,5 +1,9 @@
 {
   "version": 2,
+  "github": {
+    "enabled": true,
+    "silent": false
+  },
   "builds": [
     { "src": "*.html", "use": "@vercel/static" },
     { "src": "*.js", "use": "@vercel/static" },
