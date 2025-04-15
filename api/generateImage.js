@@ -17,10 +17,20 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Domain name is required' });
     }
 
+    // Check if API key is available
+    if (!process.env.DOUGHMAIN_OPENAI_KEY) {
+      console.error('Missing OpenAI API key in environment variables');
+      return res.status(500).json({ 
+        error: 'Configuration error', 
+        message: 'OpenAI API key is not configured. Please contact the administrator.'
+      });
+    }
+
     // Extract domain name without TLD
     const domainName = domain.split('.')[0];
 
     console.log(`Generating logo for domain: ${domainName}`);
+    console.log('OpenAI API key available:', !!process.env.DOUGHMAIN_OPENAI_KEY);
 
     // Call OpenAI API to generate a logo using DALL-E 3
     const response = await openai.images.generate({
