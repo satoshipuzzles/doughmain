@@ -18,10 +18,9 @@ Doughmain is a comprehensive domain analysis application that helps users evalua
 
 ## Deployment
 
-This application is designed to be deployed on Vercel with the following configuration:
+This project is deployed on Vercel. The deployment should update automatically when changes are pushed to the main branch.
 
-1. Set up the `DOUGHMAIN_OPENAI_KEY` environment variable with your OpenAI API key
-2. Deploy the application to Vercel
+Last deployment trigger: [current timestamp]
 
 ## Local Development
 
