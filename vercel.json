@@ -17,5 +17,6 @@
   ],
   "env": {
     "DOUGHMAIN_OPENAI_KEY": "@doughmain_openai_key"
-  }
+  },
+  "buildCommand": "echo 'Build triggered: $(date)' > build-timestamp.txt && npm install"
 } 
