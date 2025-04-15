@@ -2,7 +2,8 @@
   "version": 2,
   "github": {
     "enabled": true,
-    "silent": false
+    "silent": false,
+    "autoAlias": true
   },
   "builds": [
     { "src": "*.html", "use": "@vercel/static" },

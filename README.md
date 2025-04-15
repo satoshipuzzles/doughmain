@@ -20,7 +20,7 @@ Doughmain is a comprehensive domain analysis application that helps users evalua
 
 This project is deployed on Vercel. The deployment should update automatically when changes are pushed to the main branch.
 
-Last deployment trigger: [current timestamp]
+Last deployment trigger: [TIMESTAMP: ${new Date().toISOString()}]
 
 ## Local Development
 
