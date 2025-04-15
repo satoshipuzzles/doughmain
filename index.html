@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doughmain - Domain Analysis Tool</title>
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo-container">
+                <img src="public/assets/logo.svg" alt="Doughmain Logo" class="logo">
+                <h1>Doughmain</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="domain-input-section">
+                <form id="domainForm">
+                    <input type="text" id="domainInput" placeholder="Enter a domain name..." required>
+                    <button type="submit" class="primary-button">Analyze Domain</button>
+                </form>
+            </div>
+
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="basic">Basic Report</button>
+                    <button class="tab-button" data-tab="detailed">Detailed Analysis</button>
+                    <button class="tab-button" data-tab="sales">Sales History</button>
+                    <button class="tab-button" data-tab="similar">Similar Domains</button>
+                    <button class="tab-button" data-tab="branding">Logo Generator</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="basic" class="tab-panel active">
+                        <div class="report-container"></div>
+                    </div>
+                    <div id="detailed" class="tab-panel">
+                        <div class="report-container"></div>
+                    </div>
+                    <div id="sales" class="tab-panel">
+                        <div class="report-container"></div>
+                    </div>
+                    <div id="similar" class="tab-panel">
+                        <div class="report-container"></div>
+                    </div>
+                    <div id="branding" class="tab-panel">
+                        <div class="logo-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions-container">
+                <button id="downloadReport" class="secondary-button" disabled>Download Report</button>
+                <button id="downloadTemplate" class="secondary-button" disabled>Download Landing Page Template</button>
+            </div>
+        </main>
+
+        <div id="loadingOverlay" class="loading-overlay hidden">
+            <div class="loader"></div>
+            <p class="loading-text">Analyzing domain...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

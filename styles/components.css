@@ -1,0 +1,148 @@
+.domain-input-section {
+  margin-bottom: 2rem;
+}
+
+#domainForm {
+  display: flex;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#domainInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+#domainInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.secondary-button {
+  background-color: white;
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.secondary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tabs-container {
+  background-color: var(--surface-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border-color);
+  padding: 0 1rem;
+  overflow-x: auto;
+}
+
+.tab-button {
+  padding: 1rem 1.5rem;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  white-space: nowrap;
+}
+
+.tab-button.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tab-panel {
+  display: none;
+  padding: 2rem;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.report-container, .logo-container {
+  min-height: 200px;
+}
+
+.actions-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.error-message {
+  color: var(--error-color);
+  background-color: #FEE2E2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  color: var(--success-color);
+  background-color: #D1FAE5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  #domainForm {
+    flex-direction: column;
+  }
+
+  .tabs {
+    padding: 0;
+  }
+
+  .tab-button {
+    padding: 0.75rem 1rem;
+  }
+
+  .tab-panel {
+    padding: 1rem;
+  }
+
+  .actions-container {
+    flex-direction: column;
+  }
+}
