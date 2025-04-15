@@ -1,6 +1,6 @@
 const { OpenAI } = require('openai');
 
-// Initialize OpenAI client
+// Initialize OpenAI client -
 const openai = new OpenAI({
   apiKey: process.env.DOUGHMAIN_OPENAI_KEY,
 });
